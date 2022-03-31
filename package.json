@@ -2,13 +2,6 @@
   "name": "geokirjandus",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/geocollections/geokirjandus",
-  "bugs": {
-    "url": "https://github.com/geocollections/geokirjandus/issues"
-  },
-  "repository": {
-    "url": "https://github.com/geocollections/geokirjandus"
-  },
   "author": {
     "name": "Erik Dzotsenidze"
   },
@@ -33,6 +26,8 @@
     "leaflet": "^1.7.1",
     "leaflet.markercluster": "^1.5.0",
     "lodash": "^4.17.21",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
     "vue-i18n": "^8.24.3",
@@ -45,23 +40,31 @@
     "vuex-persist": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-optional-chaining": "^7.13.12",
-    "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
-    "@vue/cli-plugin-router": "^4.5.12",
-    "@vue/cli-plugin-vuex": "^4.5.12",
-    "@vue/cli-service": "^4.5.12",
+    "@vue/cli-plugin-babel": "^5.0.4",
+    "@vue/cli-plugin-eslint": "^5.0.4",
+    "@vue/cli-plugin-router": "^5.0.4",
+    "@vue/cli-plugin-vuex": "^5.0.4",
+    "@vue/cli-service": "~5.0.4",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^8.12.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^8.5.0",
     "prettier": "^1.19.1",
-    "sass": "^1.32.10",
+    "sass": "~1.32.6",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify": "^2.0.9",
+    "vue-cli-plugin-vuetify": "~2.4.8",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.2",
     "webpack-bundle-analyzer": "^4.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/geocollections/geokirjandus/issues"
+  },
+  "homepage": "https://github.com/geocollections/geokirjandus",
+  "repository": {
+    "url": "https://github.com/geocollections/geokirjandus"
   }
 }
