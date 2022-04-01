@@ -18,7 +18,8 @@ export default new Vuetify({
       light: {
         primary: "#fffcf8",
         secondary: "#ea9219",
-        accent: "#135ebf"
+        accent: "#135ebf",
+        anchor: "#135ebf"
       }
     },
     options: { customProperties: true }
