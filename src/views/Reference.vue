@@ -207,15 +207,19 @@
                           <tr v-if="reference.doi">
                             <th>{{ $t("reference.doi") }}</th>
                             <td>
-                              <a :href="reference.doi_url" target="_blank">{{
-                                reference.doi
-                              }}</a>
+                              <a
+                                class="link"
+                                :href="reference.doi_url"
+                                target="_blank"
+                                >{{ reference.doi }}</a
+                              >
                             </td>
                           </tr>
                           <tr v-if="reference.url">
                             <th>{{ $t("reference.url") }}</th>
                             <td>
                               <a
+                                class="link"
                                 :href="reference.url"
                                 target="_blank"
                                 style="word-break: break-all"
@@ -227,6 +231,7 @@
                             <th>{{ $t("reference.licence") }}</th>
                             <td>
                               <a
+                                class="link"
                                 :href="reference.licence_url"
                                 v-translate="{
                                   et: reference.licence.licence,
@@ -322,6 +327,7 @@
                           :key="`locality-${index}`"
                         >
                           <a
+                            class="link"
                             :href="localityURL(locality.locality.id)"
                             target="_blank"
                             v-translate="{
@@ -343,14 +349,9 @@
                         style="max-height:200px; overflow-y: auto; width: max-content"
                       >
                         <li v-for="site in sites" :key="site.site.id">
-                          <a
-                            :href="siteURL(site.site.id)"
-                            target="_blank"
-                            v-translate="{
-                              et: site.site.name,
-                              en: site.site.name_en
-                            }"
-                          />
+                          class="link" :href="siteURL(site.site.id)"
+                          target="_blank" v-translate="{ et: site.site.name, en:
+                          site.site.name_en }" />
                         </li>
                       </ul>
                     </div>
@@ -366,6 +367,7 @@
                       >
                         <li v-for="area in areas" :key="area.area.id">
                           <a
+                            class="link"
                             :href="areaURL(area.area.id)"
                             target="_blank"
                             v-translate="{
@@ -438,9 +440,12 @@
                   </div>
                   <ul>
                     <li v-for="taxon in taxa" :key="`taxon-${taxon.id}`">
-                      <a :href="taxonURL(taxon.id)" target="_blank">{{
-                        taxon.taxon
-                      }}</a>
+                      <a
+                        class="link"
+                        :href="taxonURL(taxon.id)"
+                        target="_blank"
+                        >{{ taxon.taxon }}</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -739,7 +744,7 @@ export default {
                   : localityReference.locality?.locality_en;
 
               return {
-                popup: `<a href="https://geoloogia.info/locality/${localityReference.locality?.id}" target="_blank">${localityTitle}</a>`,
+                popup: `<a class="link" href="https://geoloogia.info/locality/${localityReference.locality?.id}" target="_blank">${localityTitle}</a>`,
                 title: localityTitle,
                 coordinates: [
                   localityReference.locality?.latitude,
@@ -755,7 +760,7 @@ export default {
                   : localityReference.site?.name_en;
 
               return {
-                popup: `<a href="https://geoloogia.info/site/${localityReference.site?.id}" target="_blank">${siteTitle}</a>`,
+                popup: `<a class="link" href="https://geoloogia.info/site/${localityReference.site?.id}" target="_blank">${siteTitle}</a>`,
                 title: siteTitle,
                 coordinates: [
                   localityReference.site?.latitude,

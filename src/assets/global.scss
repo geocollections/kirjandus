@@ -1,7 +1,12 @@
 .font-family-exo-2 {
   font-family: "Exo 2", "Roboto", sans-serif !important;
 }
-
+.link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .header-menu-item {
   &.header-menu-item-active {
     // border-left: 4px solid var(--v-primary-darken2);
